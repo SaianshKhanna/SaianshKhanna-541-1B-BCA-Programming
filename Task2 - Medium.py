@@ -2,7 +2,7 @@ def main(): # Creating a function to perform
     expenses = {}  # Dictionary to store category input by user
     total = 0
 
-    while True:
+    while True: 
         print("\n|| ~ Personal Expense Tracker ~ ||")
         print("1. Add Expense")
         print("2. View Total Spent")
@@ -27,16 +27,16 @@ def main(): # Creating a function to perform
 
                 print(f"Added {amount} in {category}.")
             except ValueError:
-                print("Invalid amount! Please enter a number.")
+                print("Invalid amount! Please enter a number.") # Checks for errors and if there is one, it replies VALUE_ERROR
 
         elif choice == "2":
-            print(f"\nTotal Spent: {total}")
+            print(f"\nTotal Spent: {total}") # Prints out the total spent (including all categories)
 
         elif choice == "3":
             if not expenses:
                 print("\nNo expenses recorded yet.")
             else:
-                print("\nPer-Category Breakdown:")
+                print("\nPer-Category Breakdown:") # Prints out catery wise spent in total
                 for cat, amt in expenses.items():
                     print(f"   {cat}: {amt}")
 
@@ -47,3 +47,4 @@ def main(): # Creating a function to perform
             print("Invalid choice, Please try again.")
 
 main()
+
